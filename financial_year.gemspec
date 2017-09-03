@@ -6,7 +6,7 @@ require "financial_year/version"
 Gem::Specification.new do |spec|
   spec.name          = "financial_year"
   spec.version       = FinancialYear::VERSION
-  spec.authors       = ["Jack Wu( [♠]]] )"]
+  spec.authors       = ["Jack Wu"]
   spec.email         = ["xuwupeng2000@gmail.com"]
 
   spec.summary       = %q{A gem tells you what financial year is it now, and also the date range of it}
