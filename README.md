@@ -1,39 +1,21 @@
 # FinancialYear
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/financial_year`. To experiment with that code, run `bin/console` for an interactive prompt.
+> A gem tells you what financial year is it now, and also the date range of it
 
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
+### How to user it
 
 ```ruby
-gem 'financial_year'
+  klass = FinancialYear::FinancialYear.config(
+    start_month = 4,
+    start_day = 1,
+    end_month = 3,
+    end_day = 31
+  )
+
+  financial_year = klass.for_year(2017)
+  financial_year.financial_year_range
+  # expect(instance.financial_year_range).to eq Date.new(2016, 4, 1)..Date.new(2017, 3, 31)
+
+  financial_year.ytd_range
+  # expect(instance.ytd_range).to eq Date.new(2017, 4, 1)..Date.today
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install financial_year
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/xuwupeng2000/financial_year.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
