@@ -18,4 +18,15 @@
 
   financial_year.ytd_range
   # expect(instance.ytd_range).to eq Date.new(2017, 4, 1)..Date.today
+
+
+  # Real life example
+  today = Date.today
+
+  start_last_year = today.month >= FinancialYear.start_month ? today.year - 1 : today.year - 2
+  # Last financial year
+  last_year = FinancialYear.for_year(start_last_year).financial_year_range
+
+  # This on going financial year
+  current_year_ytd = FinancialYear.for_year(start_last_year + 1).ytd_range
 ```
