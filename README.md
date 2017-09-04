@@ -3,6 +3,10 @@
 > A gem tells you what financial year is it now, and also the date range of it
 
 ### How to use it
+```
+PUT this in your Gemfile
+gem 'financial_year', '~> 0.1.0'
+```
 
 ```ruby
   klass = FinancialYear::FinancialYear.config(
